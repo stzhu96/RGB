@@ -7,6 +7,7 @@ from dash.dependencies import Input, Output, State
 import base64
 
 app = dash.Dash(__name__)
+server = app.server
 
 app.layout = html.Div([
     html.H1("RGB特征展示"),
@@ -75,4 +76,4 @@ def update_output_image_upload(contents):
         ])
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    app.run_server(debug=False)
